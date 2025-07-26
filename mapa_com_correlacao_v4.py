@@ -1,4 +1,6 @@
 # mapa_com_correlacao_v4.py
+from dotenv import load_dotenv
+load_dotenv()            # lê automaticamente o .env na raiz
 import os
 import math
 import datetime
@@ -26,10 +28,7 @@ DATA_DIR = os.path.join(BASE_DIR, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
 # MongoDB
-MONGO_URI = os.getenv(
-    "MONGO_URI_PRIMARY",
-    "mongodb+srv://lhms:lhms123@clusterlhms.vpuaqlo.mongodb.net/qualidade_ar?retryWrites=true&w=majority"
-)
+MONGO_URI = os.getenv("MONGO_URI")
 TIMEOUT_MS = 5000  # ms
 
 def get_db():
