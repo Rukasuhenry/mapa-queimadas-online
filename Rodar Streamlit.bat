@@ -16,9 +16,11 @@ echo Instalando dependências...
     folium ^
     pandas ^
     branca ^
+    python-dotenv ^
     numpy ^
     scipy ^
     matplotlib==3.6.3
+
 
 REM ─────────────────────────────────────────────────────
 REM Inicia o Streamlit com endereço e porta explícitos
